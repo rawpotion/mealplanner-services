@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  client:
+    build:
+      context: mealplanner-client
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - "./mealplanner-client/:/base/"
+    depends_on:
+      - mealplanner-backend
+  
+  backend:
+    build:
+      context: mealplanner-backend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - "./mealplanner-backend/:/source/"
+    ports:
+      - 5000:80
+      - 5001:443

@@ -1,0 +1,6 @@
+[submodule "mealplanner-client"]
+	path = mealplanner-client
+	url = git@github.com:rawpotion/mealplanner-client
+[submodule "mealplanner-backend"]
+	path = mealplanner-backend
+	url = git@github.com:rawpotion/mealplanner-backend

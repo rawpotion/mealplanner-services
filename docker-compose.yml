@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  client:
+    build:
+      context: client
+      dockerfile: production.Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+  
+  backend:
+    build:
+      context: backend
+      dockerfile: production.Dockerfile
+    ports:
+      - 5000:80
+      - 5001:443
