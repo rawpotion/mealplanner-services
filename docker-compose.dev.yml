@@ -10,7 +10,7 @@ services:
     volumes:
       - "./mealplanner-client/:/base/"
     depends_on:
-      - mealplanner-backend
+      - backend
   
   backend:
     build:
